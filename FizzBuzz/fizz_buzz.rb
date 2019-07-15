@@ -1,15 +1,15 @@
 def fizz_buzz(num)
-    if !num.is_a? (Integer)
-       return nil
-    elsif (num % 3 == 00) && (num % 5 == 0)
-      "FizzBuzz"
-    elsif (num % 3 == 0)
-      "Fizz"
-    elsif (num % 5 == 0)
-      "Buzz"
-    else
-      num
-    end
+  if !num.is_a? (Integer)
+    nil
+  elsif (num % 3 == 00) && (num % 5 == 0)
+    "FizzBuzz"
+  elsif (num % 3 == 0)
+    "Fizz"
+  elsif (num % 5 == 0)
+    "Buzz"
+  else
+    num
+  end
 end
 
 # def fizz_buzz(max)
