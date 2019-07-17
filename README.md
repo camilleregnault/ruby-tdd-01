@@ -71,3 +71,6 @@ Install Rubocop then run it:
 gem install rubocop
 rubocop --format simple || true
 ```
+
+## Doc
+Rspec guidelines with Ruby [http://www.betterspecs.org/](http://www.betterspecs.org/)
