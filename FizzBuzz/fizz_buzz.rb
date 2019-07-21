@@ -1,33 +1,41 @@
-def fizz_buzz(num)
-  if !num.is_a? (Integer)
-    nil
-  elsif (num % 3 == 00) && (num % 5 == 0)
-    "FizzBuzz"
-  elsif (num % 3 == 0)
-    "Fizz"
-  elsif (num % 5 == 0)
-    "Buzz"
-  else
-    num
-  end
+def fizz_buzz_num(num)
+  return nil unless num.is_a? Integer
+  return 'FizzBuzz' if (num % 3).zero? && (num % 5).zero?
+  return 'Fizz' if (num % 3).zero?
+  return 'Buzz' if (num % 5).zero?
+
+  num
+
+  # if !num.is_a? Integer
+  #   nil
+  # elsif (num % 3).zero? && (num % 5).zero?
+  #   'FizzBuzz'
+  # elsif (num % 3).zero?
+  #   'Fizz'
+  # elsif (num % 5).zero?
+  #   'Buzz'
+  # else
+  #   num
+  # end
 end
 
-# def fizz_buzz(max)
-#   array = []
-#   (1..max).each do |num|
-#     if !num.is_a? (Integer)
-#        return nil
-#     elsif (num % 3 == 00) && (num % 5 == 0)
-#       array += "FizzBuzz"
-#     elsif (num % 3 == 0)
-#       array += "Fizz"
-#     elsif (num % 5 == 0)
-#       array += "Buzz"
-#     else
-#       array += num
-#     end
-#   end
+def fizz_buzz_game(num)
+  return nil unless num.is_a? Integer
+  return nil if num.negative?
+  return [] if num.zero?
 
-  # return array
-    # print "Please enter a number: "
-    # rescue nil
+  arr = []
+  num.times do |i|
+    inc = i + 1
+    arr << if (inc % 3).zero? && (inc % 5).zero?
+            'FizzBuzz'
+      elsif (inc % 3).zero?
+        'Fizz'
+      elsif (inc % 5).zero?
+        'Buzz'
+      else
+        inc
+    end
+  end
+  arr
+end
