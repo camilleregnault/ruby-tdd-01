@@ -1,0 +1,10 @@
+Ecrire méthode(s)/classe(s)/module (s) qui prend en paramètre une chaîne de caractères (maximum de 256 caractères) composé uniquement de lettre ASCII a-z&A-Z.
+
+Vous devez retourner un hash qui compte le nombre de caractères identiques.
+Ex:
+$ count_letters('aebcAedBe')
+$ { :a => 2, :b => 2, :c => 1, :d => 1, :e => 3}
+
+Tous les cas d'erreurs devront lever une exception et en cas de chaîne vide renvoyer le message suivant : 'You kidding me?'
+
+Le développement se fera en tdd.
